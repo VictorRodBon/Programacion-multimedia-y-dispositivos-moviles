@@ -1,0 +1,8 @@
+com.example.textos_e_imagenes.app-pngs-0 /home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/textoseimagenes/app/build/generated/res/pngs/debug
+com.example.textos_e_imagenes.app-updated_navigation_xml-1 /home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/textoseimagenes/app/build/generated/updated_navigation_xml/debug
+com.example.textos_e_imagenes.app-packageDebugResources-2 /home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/textoseimagenes/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.example.textos_e_imagenes.app-packageDebugResources-3 /home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/textoseimagenes/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.example.textos_e_imagenes.app-debug-4 /home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/textoseimagenes/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.example.textos_e_imagenes.app-debug-5 /home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/textoseimagenes/app/src/debug/res
+com.example.textos_e_imagenes.app-main-6 /home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/textoseimagenes/app/src/main/res
+gradleHome-0 /home/alumnotd/.gradle
