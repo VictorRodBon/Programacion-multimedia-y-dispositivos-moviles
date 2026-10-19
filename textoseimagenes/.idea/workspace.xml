@@ -10,39 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b2e0eae-0c21-4eef-9496-840bbc7764e1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/androidTest/java/com/example/textos_e_imagenes_2/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/textos_e_imagenes_2/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/textos_e_imagenes_2/ui/theme/Color.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/textos_e_imagenes_2/ui/theme/Theme.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/textos_e_imagenes_2/ui/theme/Type.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/keepRules/rules.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/xml/backup_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/test/java/com/example/textos_e_imagenes_2/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-android-kotlin-compose-training-dice-roller/app/src/main/java/com/example/diceroller/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-android-kotlin-compose-training-dice-roller/app/src/main/java/com/example/diceroller/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +68,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/textoseimagenes"
+    "last_opened_file_path": "/home/alumnotd/victor/Programacion-multimedia-y-dispositivos-moviles/EjemploScaffold"
   }
 }]]></component>
   <component name="RecentsManager">
