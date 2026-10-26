@@ -2,4 +2,6 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.compose) apply false
+    // Para ROOM
+    alias(libs.plugins.google.ksp) apply false
 }

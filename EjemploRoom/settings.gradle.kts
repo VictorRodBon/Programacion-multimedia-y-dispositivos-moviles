@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EjercicioScafold"
+rootProject.name = "EjemploRoom"
 include(":app")
  

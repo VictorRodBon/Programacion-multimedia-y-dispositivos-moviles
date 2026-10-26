@@ -1,4 +1,4 @@
-package com.example.ejercicioscafold
+package com.example.ejemploroom
 
 import org.junit.Test
 
