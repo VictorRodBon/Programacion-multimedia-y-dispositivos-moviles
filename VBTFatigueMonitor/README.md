@@ -29,7 +29,7 @@ Implementar la arquitectura de persistencia local dividida en 3 componentes prin
    3. `repNumber` (int)
    4. `velocity` (velocidad)
    5. `isFatiguedReached` (bool)
-3. DAO (`SerieDao.kt`): Crea la interfaz con las consultas del CRUD completo:
+3. DAO (`SerieDao.kt.kt`): Crea la interfaz con las consultas del CRUD completo:
    1. Create: `@Insert` para guardar una nueva serie
    2. Read: `@Query("SELECT * FROM series")` para el historial.
    3. Update: `@Update` para modificar notas o parámetros de una serie

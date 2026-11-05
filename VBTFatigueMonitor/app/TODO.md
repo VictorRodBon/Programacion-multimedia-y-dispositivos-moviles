@@ -1,0 +1,7 @@
+- [ ] Paso 1: Configuración del proyecto
+  - [x] Crear un proyecto de tipo empty activity
+  - [ ] Personalizar el tema (modificar `Color.kt`, `Type.kt` y `Theme.kt`)
+    - [x] Definir una paleta de colores
+    - [ ] Aplicar tipografía
+- [ ] Paso 2: Estructura base (`Scafold`)
+  - [ ] 
