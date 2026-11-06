@@ -16,6 +16,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Info
+//import androidx.compose.material.icons.filled.FormatQuote
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -35,6 +37,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -42,6 +45,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.vbtfatiguemonitor.data.local.SerieWithRepeticiones
 import com.example.vbtfatiguemonitor.ui.viewmodel.SerieViewModel
+// Importa tu ViewModel de frases (ajusta el paquete si es necesario)
+// import com.example.vbtfatiguemonitor.ui.viewmodel.GymQuoteViewModel
 import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -49,10 +54,25 @@ import java.util.Locale
 fun HomeScreen(
     onNavigateToTraining: () -> Unit,
     onNavigateToDetail: (Long) -> Unit,
-    viewModel: SerieViewModel = viewModel()
+    viewModel: SerieViewModel = viewModel(),
+    // quoteViewModel: GymQuoteViewModel = viewModel() // Descomenta si usas el ViewModel de red
 ) {
     val series by viewModel.history.collectAsStateWithLifecycle()
     var serieToDelete by remember { mutableStateOf<SerieWithRepeticiones?>(null) }
+
+    // Si usas el ViewModel de red, descomenta esto:
+    // val quote by quoteViewModel.quoteText.collectAsStateWithLifecycle()
+    // val author by quoteViewModel.authorText.collectAsStateWithLifecycle()
+
+    // Si prefieres la versión local instantánea sin internet:
+    val motivationalQuote = remember {
+        listOf(
+            "El dolor que sientes hoy será la fuerza que sientas mañana.",
+            "La única mala sesión es la que no se hace.",
+            "Si no te retas, no te cambias.",
+            "El hierro nunca miente."
+        ).random()
+    }
 
     Scaffold(
         topBar = {
@@ -64,41 +84,79 @@ fun HomeScreen(
             }
         }
     ) { innerPadding ->
-        if (series.isEmpty()) {
-            Box(
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+            // Tarjeta de motivación superior
+            Card(
                 modifier = Modifier
-                    .fillMaxSize()
-                    .padding(innerPadding)
-                    .padding(32.dp),
-                contentAlignment = Alignment.Center
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.primaryContainer
+                ),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        text = "Todavía no hay series guardadas",
-                        style = MaterialTheme.typography.titleMedium
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Info, // Icono disponible por defecto
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                        modifier = Modifier.padding(end = 12.dp)
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = "Pulsa el botón + para iniciar tu primer entrenamiento.",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = "\"$motivationalQuote\"", // O usa `quote` si viene del ViewModel
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontStyle = FontStyle.Italic,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
                 }
             }
-        } else {
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(innerPadding),
-                contentPadding = PaddingValues(16.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                items(items = series, key = { it.serie.id }) { item ->
-                    SerieCard(
-                        item = item,
-                        onClick = { onNavigateToDetail(item.serie.id) },
-                        onDeleteClick = { serieToDelete = item }
-                    )
+
+            // Contenido principal: Lista vacía o LazyColumn con las series
+            if (series.isEmpty()) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(32.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(
+                            text = "Todavía no hay series guardadas",
+                            style = MaterialTheme.typography.titleMedium
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "Pulsa el botón + para iniciar tu primer entrenamiento.",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+            } else {
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    items(items = series, key = { it.serie.id }) { item ->
+                        SerieCard(
+                            item = item,
+                            onClick = { onNavigateToDetail(item.serie.id) },
+                            onDeleteClick = { serieToDelete = item }
+                        )
+                    }
                 }
             }
         }
